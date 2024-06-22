@@ -14,6 +14,9 @@ const khodams = [
     'Tisu Terbang', 'Kucing Hitam', 'Ikan Dewa', 'Gajah Putih', 'Kijang Perak'
 ]
 
+const loader = document.querySelector('.loader')
+const box = document.getElementById('box')
+
 function cekKhodam() {
     const input = document.querySelector('#input').value
 
@@ -24,9 +27,15 @@ function cekKhodam() {
             text: "Silahkan Isi Nama",      
         })
     } else {
-        const randomKhodam = khodams[Math.floor(Math.random() * khodams.length)]
-        desc.innerHTML = `Khodam yang ada dalam diri <span>${input}</span> adalah`
-        kodam.innerText = `${randomKhodam}`
+        loader.style.display = 'flex'
+        box.style.opacity = '0.5'
+        setTimeout(() => {
+            const randomKhodam = khodams[Math.floor(Math.random() * khodams.length)]
+            desc.innerHTML = `Khodam yang ada dalam diri <span>${input}</span> adalah`
+            kodam.innerText = `${randomKhodam}`
+            loader.style.display = 'none';
+            box.style.opacity = ''
+        }, 2000)
     }
 }
 
