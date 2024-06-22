@@ -75,5 +75,6 @@ span {
 @media screen and (max-width: 560px) {
     body {
         padding: 10px;
+        overflow: hidden;
     }
 }
