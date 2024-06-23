@@ -33,7 +33,7 @@ function cekKhodam() {
             const randomKhodam = khodams[Math.floor(Math.random() * khodams.length)]
             desc.innerHTML = `Khodam yang ada dalam diri <span>${input}</span> adalah`
             kodam.innerText = `${randomKhodam}`
-            loader.style.display = 'none';
+            loader.style.display = 'none'
             box.style.opacity = ''
         }, 2000)
     }
