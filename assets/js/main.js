@@ -1,6 +1,6 @@
 const desc = document.getElementById('desc')
 const kodam = document.getElementById('kodam')
-const button = document.querySelector('.btn')
+const button = document.querySelector('.check')
 
 const khodams = [
     'Harimau Putih', 'Lampu Tertidur', 'Panda Ompong', 'Bebek Karet', 'Ninja Turtle', 
@@ -16,11 +16,13 @@ const khodams = [
 
 const loader = document.querySelector('.loader')
 const box = document.getElementById('box')
+const input = document.getElementById('input')
+const result = document.getElementById('result')
 
 function cekKhodam() {
-    const input = document.querySelector('#input').value
+    const inputVal = input.value
 
-    if (input == "") {
+    if (inputVal === "") {
         Swal.fire({
             icon: "error",
             title: "Oops...",
@@ -31,10 +33,13 @@ function cekKhodam() {
         box.style.opacity = '0.5'
         setTimeout(() => {
             const randomKhodam = khodams[Math.floor(Math.random() * khodams.length)]
-            desc.innerHTML = `Khodam yang ada dalam diri <span>${input}</span> adalah`
+            desc.innerHTML = `Khodam yang ada dalam diri <br> <span>${inputVal}</span> adalah`
             kodam.innerText = `${randomKhodam}`
             loader.style.display = 'none'
             box.style.opacity = ''
+            input.value = ''
+            result.style.display = 'flex'
+            box.style.display = 'none'
         }, 2000)
     }
 }
@@ -44,4 +49,17 @@ input.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
         cekKhodam()
     }
+})
+
+const repeat = document.querySelector('.repeat')
+
+repeat.addEventListener('click', function() {
+    loader.style.display = 'flex'
+    result.style.opacity = '0.5'
+    setTimeout(() => {
+        result.style.opacity = ''
+        loader.style.display = 'none'
+        result.style.display = 'none'
+        box.style.display = 'flex'
+    }, 2000)
 })

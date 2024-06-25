@@ -67,9 +67,17 @@ span {
     color: red;
 }
 
+h1 {
+    font-size: 40px;
+}
+
 #kodam {
     color: #FF204E;
     font-size: 40px;
+}
+
+#result {
+    display: none;
 }
 
 .loader {
@@ -80,20 +88,19 @@ span {
     border-top: 16px solid #3498db;
     width: 80px;
     height: 80px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
+    -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
-  }
+}
   
-  /* Safari */
-  @-webkit-keyframes spin {
+@-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }
-  }
+}
   
-  @keyframes spin {
+@keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
+}
 
 @media screen and (max-width: 560px) {
     body {
