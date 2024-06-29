@@ -78,6 +78,7 @@ h1 {
 
 #result {
     display: none;
+    padding: 0 20px;
 }
 
 .loader {

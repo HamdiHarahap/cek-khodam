@@ -4,184 +4,202 @@ const button = document.querySelector('.check')
 const meaning = document.getElementById('meaning')
 
 const khodams = [
-    {
-        nama: 'Harimau Putih',
-        deskripsi: 'Makhluk yang menampilkan keanggunan dengan bulu putihnya, sering kali muncul dengan suara "Roar!" yang mempesona.'
-    },
-    {
-        nama: 'Lampu Tertidur',
-        deskripsi: 'Khodam yang selalu dalam tidurnya, hanya menyala saat dibutuhkan, menunjukkan ketenangan dan kesabaran dalam menunggu saat yang tepat.'
-    },
-    {
-        nama: 'Panda Ompong',
-        deskripsi: 'Makhluk yang menghadirkan kelembutan dalam keunikannya, selalu tersenyum tanpa gigi, menunjukkan kebahagiaan dalam kesederhanaan.'
-    },
-    {
-        nama: 'Bebek Karet',
-        deskripsi: 'Khodam yang membawa keceriaan dengan kegemarannya bersiul dan bermain di air, menghadirkan keceriaan dan kelembutan.'
-    },
-    {
-        nama: 'Ninja Turtle',
-        deskripsi: 'Makhluk yang ahli dalam tindakan diam-diam, menunjukkan keahlian luar biasa dalam keterampilan yang dimilikinya.'
-    },
-    {
-        nama: 'Kucing Kulkas',
-        deskripsi: 'Khodam yang berada di tempat yang dingin, selalu memberikan kesegaran dan kenyamanan dengan kehadirannya.'
-    },
-    {
-        nama: 'Sabun Wangi',
-        deskripsi: 'Makhluk yang mengajarkan pentingnya kebersihan dan kenyamanan, selalu menghadirkan pengalaman yang menyenangkan dalam perawatan diri.'
-    },
-    {
-        nama: 'Semut Kecil',
-        deskripsi: 'Khodam yang kuat dan penuh dedikasi, menunjukkan ketekunan dan kekuatan dalam pekerjaannya.'
-    },
-    {
-        nama: 'Cupcake Pelangi',
-        deskripsi: 'Makhluk yang menyebarkan keceriaan dan manisnya kehidupan, selalu menghadirkan keceriaan dalam setiap momen.'
-    },
-    {
-        nama: 'Robot Mini',
-        deskripsi: 'Khodam yang canggih dan penuh semangat, selalu siap membantu dengan teknologi dan kebaikan hati.'
-    },
-    {
-        nama: 'Ikan Terbang',
-        deskripsi: 'Makhluk yang bisa terbang di udara, sering kali mengejutkan burung-burung, suka bermain di langit saat hujan.'
-    },
-    {
-        nama: 'Ayam Goreng',
-        deskripsi: 'Khodam yang suka menggoreng dirinya sendiri, selalu hangat dan renyah, tapi jangan coba-coba memakannya!'
-    },
-    {
-        nama: 'Kecoa Terbang',
-        deskripsi: 'Makhluk yang bisa terbang dan sangat gesit, suka bersembunyi di tempat-tempat tak terduga dan membuat orang terkejut.'
-    },
-    {
-        nama: 'Kambing Ngebor',
-        deskripsi: 'Khodam yang suka mengebor tanah dengan tanduknya, punya kekuatan luar biasa dan selalu menemukan harta karun.'
-    },
-    {
-        nama: 'Kerupuk Renyah',
-        deskripsi: 'Makhluk yang selalu renyah dan enak dimakan kapan saja, suka berkeliling mengajak orang-orang makan camilan bersama.'
-    },
-    {
-        nama: 'Celengan Babi',
-        deskripsi: 'Khodam yang selalu menyimpan uang dengan aman, suka mengajarkan anak-anak tentang pentingnya menabung.'
-    },
-    {
-        nama: 'Lemari Tua',
-        deskripsi: 'Makhluk yang penuh dengan cerita masa lalu, suka bercerita tentang zaman dahulu kepada siapa saja yang mendengarkan.'
-    },
-    {
-        nama: 'Kopi Susu',
-        deskripsi: 'Khodam yang selalu hangat dan menyegarkan, suka menghidupkan semangat di pagi hari.'
-    },
-    {
-        nama: 'Sapu Lidi',
-        deskripsi: 'Makhluk yang terbuat dari lidi yang kuat, suka membersihkan rumah dengan teliti dan menyapu semua kotoran.'
-    },
-    {
-        nama: 'Kuda Lumping',
-        deskripsi: 'Khodam yang mainan yang bisa menari dengan lincah, suka menghibur orang-orang dengan tariannya yang energik.'
-    },
-    {
-        nama: 'Sepatu Roda',
-        deskripsi: 'Makhluk yang cepat dan lincah, suka meluncur di jalanan dengan gaya yang keren.'
-    },
-    {
-        nama: 'Bola Pingpong',
-        deskripsi: 'Khodam yang suka melompat-lompat dengan semangat, suka bermain di meja pingpong dengan temannya.'
-    },
-    {
-        nama: 'Lumba-lumba',
-        deskripsi: 'Makhluk yang cerdas dan suka bermain di laut, suka mengajak orang-orang berenang bersama dan menunjukkan trik-trik keren.'
-    },
-    {
-        nama: 'Kucing Gemuk',
-        deskripsi: 'Khodam yang gemuk dan menggemaskan, suka tidur di tempat yang empuk dan selalu mencari perhatian.'
-    },
-    {
-        nama: 'Iguana Pink',
-        deskripsi: 'Makhluk yang dengan warna pink yang unik, suka berjemur di bawah matahari dan menunjukkan warna cerahnya.'
-    },
-    {
-        nama: 'Bantal Guling',
-        deskripsi: 'Khodam yang empuk dan nyaman, suka memberikan pelukan yang hangat saat tidur.'
-    },
-    {
-        nama: 'Computer Jadul',
-        deskripsi: 'Makhluk yang tua namun masih berfungsi dengan baik, suka membantu dengan pengetikan dan bermain game klasik.'
-    },
-    {
-        nama: 'Aldi Taher',
-        deskripsi: 'Khodam yang selalu penuh dengan ide-ide kreatif, suka menghibur dengan lagu-lagu dan film-filmnya.'
-    },
-    {
-        nama: 'Charger Iphone',
-        deskripsi: 'Makhluk yang selalu ada ketika baterai habis, suka memberikan energi dan membuat ponsel kembali hidup.'
-    },
-    {
-        nama: 'Kasur Empuk',
-        deskripsi: 'Khodam yang sangat empuk dan nyaman, suka memberikan tidur yang nyenyak dan mimpi indah.'
-    },
-    {
-        nama: 'Es Krim Pelangi',
-        deskripsi: 'Makhluk yang dengan rasa pelangi yang menyegarkan, suka membuat hari-hari menjadi lebih manis.'
-    },
-    {
-        nama: 'Biskuit Coklat',
-        deskripsi: 'Khodam yang dengan rasa coklat yang enak, suka menjadi teman minum teh dan kopi.'
-    },
-    {
-        nama: 'Sepeda Ontel',
-        deskripsi: 'Makhluk yang tua namun kuat dan tahan lama, suka berkeliling desa dengan tenang.'
-    },
-    {
-        nama: 'Sate Kambing',
-        deskripsi: 'Khodam yang lezat dan nikmat, suka membuat orang-orang lapar dengan aromanya.'
-    },
-    {
-        nama: 'Kue Cubit',
-        deskripsi: 'Makhluk yang kecil, lembut, dan manis, suka membuat orang-orang tersenyum dengan rasanya.'
-    },
-    {
-        nama: 'Mie Goreng',
-        deskripsi: 'Khodam yang enak dan menggugah selera, suka mengisi perut yang kosong dengan cita rasa yang lezat.'
-    },
-    {
-        nama: 'Anjing Pelacak',
-        deskripsi: 'Makhluk yang pintar dan setia, suka membantu mencari benda yang hilang dengan penciumannya yang tajam.'
-    },
-    {
-        nama: 'Panci Penyihir',
-        deskripsi: 'Khodam yang bisa memasak apa saja, suka membuat ramuan ajaib yang lezat.'
-    },
-    {
-        nama: 'Gunting Goyang',
-        deskripsi: 'Makhluk yang selalu bergerak saat dipakai, suka membantu memotong dengan tarian yang lucu.'
-    },
-    {
-        nama: 'Tisu Terbang',
-        deskripsi: 'Khodam yang bisa terbang dan selalu ada saat dibutuhkan, suka membantu menghapus air mata dan membersihkan kotoran.'
-    },
-    {
-        nama: 'Kucing Hitam',
-        deskripsi: 'Makhluk yang dengan bulu hitam pekat, suka bermain di malam hari dan misterius.'
-    },
-    {
-        nama: 'Ikan Dewa',
-        deskripsi: 'Khodam yang dianggap suci dan membawa keberuntungan, suka berenang di kolam dengan anggun.'
-    },
-    {
-        nama: 'Gajah Putih',
-        deskripsi: 'Makhluk yang besar dengan kulit putih, suka membantu membawa barang-barang dan sangat kuat.'
-    },
-    {
-        nama: 'Kijang Perak',
-        deskripsi: 'Khodam yang dengan tanduk perak yang mengkilap, suka berlari dengan cepat di hutan.'
-    }
-];
-
+    { name: "Harimau Putih", meaning: "Kamu kuat dan berani seperti harimau, karena pendahulumu mewariskan kekuatan besar padamu." },
+    { name: "Lampu Tertidur", meaning: "Terlihat ngantuk tapi selalu memberikan cahaya yang hangat" },
+    { name: "Panda Ompong", meaning: "Kamu menggemaskan dan selalu berhasil membuat orang tersenyum dengan keanehanmu." },
+    { name: "Bebek Karet", meaning: "Kamu selalu tenang dan ceria, mampu menghadapi gelombang masalah dengan senyum." },
+    { name: "Ninja Turtle", meaning: "Kamu lincah dan tangguh, siap melindungi yang lemah dengan kekuatan tempurmu." },
+    { name: "Kucing Kulkas", meaning: "Kamu misterius dan selalu ada di tempat-tempat yang tak terduga." },
+    { name: "Sabun Wangi", meaning: "Kamu selalu membawa keharuman dan kesegaran di mana pun kamu berada." },
+    { name: "Semut Kecil", meaning: "Kamu pekerja keras dan selalu bisa diandalkan dalam situasi apa pun." },
+    { name: "Moge Suzuki", meaning: "Kamu cepat dan penuh gaya, selalu menjadi pusat perhatian di jalanan." },
+    { name: "Cupcake Pelangi", meaning: "Kamu manis dan penuh warna, selalu membawa kebahagiaan dan keceriaan." },
+    { name: "Robot Mini", meaning: "Kamu canggih dan selalu siap membantu dengan kecerdasan teknologi tinggi." },
+    { name: "Ikan Terbang", meaning: "Kamu unik dan penuh kejutan, selalu melampaui batasan yang ada." },
+    { name: "Ayam Goreng", meaning: "Kamu selalu disukai dan dinanti oleh banyak orang, penuh kelezatan dalam setiap langkahmu." },
+    { name: "Kecoa Terbang", meaning: "Kamu selalu mengagetkan dan bikin heboh seisi ruangan." },
+    { name: "Kambing Ngebor", meaning: "Kamu unik dan selalu bikin orang tertawa dengan tingkah lakumu yang aneh." },
+    { name: "Kerupuk Renyah", meaning: "Kamu selalu bikin suasana jadi lebih seru dan nikmat." },
+    { name: "Celengan Babi", meaning: "Kamu selalu menyimpan kejutan di dalam dirimu." },
+    { name: "Lemari Tua", meaning: "Kamu penuh dengan cerita dan kenangan masa lalu." },
+    { name: "Kopi Susu", meaning: "Kamu manis dan selalu bikin semangat orang-orang di sekitarmu." },
+    { name: "Sapu Lidi", meaning: "Kamu kuat dan selalu bisa diandalkan untuk membersihkan masalah." },
+    { name: "Sepatu Roda", meaning: "Kamu cepat dan lincah, selalu bergerak ke depan dengan penuh gaya." },
+    { name: "Bola Pingpong", meaning: "Kamu ringan dan selalu bikin permainan jadi lebih seru." },
+    { name: "Lumba-lumba", meaning: "Kamu pintar dan selalu membawa keceriaan di lautan kehidupan." },
+    { name: "Kucing Gemuk", meaning: "Kamu santai dan selalu bikin orang tersenyum dengan kelucuanmu." },
+    { name: "Iguana Pink", meaning: "Kamu eksotis dan selalu menarik perhatian dengan warnamu yang unik." },
+    { name: "Bantal Guling", meaning: "Kamu nyaman dan selalu dibutuhkan saat waktu istirahat." },
+    { name: "Komputer Jadul", meaning: "Kamu klasik dan penuh dengan pengetahuan di dalam dirimu." },
+    { name: "Kasur Empuk", meaning: "Kamu selalu memberikan kenyamanan dan ketenangan." },
+    { name: "Bola Bekel", meaning: "Kamu kecil tapi selalu memberikan kebahagiaan di setiap permainan." },
+    { name: "Es Krim Pelangi", meaning: "Kamu manis dan penuh warna, selalu menyegarkan hari-hari." },
+    { name: "Biskuit Coklat", meaning: "Kamu selalu bikin ketagihan dengan kelezatanmu yang tak tertahankan." },
+    { name: "Nasi Padang", meaning: "Kamu selalu bikin kenyang dan puas dengan kelezatanmu yang khas." },
+    { name: "Roti Bakar", meaning: "Kamu sederhana tapi selalu bikin orang merasa nyaman." },
+    { name: "Sepeda Ontel", meaning: "Kamu klasik dan selalu memberikan kesenangan di setiap perjalanan." },
+    { name: "Sate Kambing", meaning: "Kamu gurih dan selalu jadi favorit di setiap kesempatan." },
+    { name: "Kue Cubit", meaning: "Kamu kecil tapi selalu bikin orang bahagia dengan rasamu yang enak." },
+    { name: "Bakso Urat", meaning: "Kamu kuat dan selalu memberikan kenikmatan di setiap gigitan." },
+    { name: "Es Kelapa", meaning: "Kamu segar dan selalu bikin adem di saat-saat panas." },
+    { name: "Siomay Bandung", meaning: "Kamu selalu bikin ketagihan dengan rasa khasmu yang lezat." },
+    { name: "Bajigur Hangat", meaning: "Kamu selalu bikin suasana jadi hangat dan nyaman." },
+    { name: "Martabak Manis", meaning: "Kamu penuh kejutan dengan isi yang manis dan nikmat." },
+    { name: "Permen Karet", meaning: "Kamu selalu bikin suasana jadi lebih ceria dengan kenikmatanmu yang kenyal." },
+    { name: "Pisang Goreng", meaning: "Kamu selalu bikin suasana jadi lebih hangat dan nyaman." },
+    { name: "Telur Dadar", meaning: "Kamu sederhana tapi selalu bikin orang puas dengan kelezatanmu." },
+    { name: "Es Buah", meaning: "Kamu segar dan penuh warna, selalu bikin hari jadi lebih ceria." },
+    { name: "Mie Goreng", meaning: "Kamu selalu bikin kenyang dan puas dengan rasamu yang lezat." },
+    { name: "Puding Coklat", meaning: "Kamu manis dan selalu bikin suasana jadi lebih nyaman." },
+    { name: "Gulai Kambing", meaning: "Kamu kaya rasa dan selalu bikin orang ketagihan dengan kelezatanmu." },
+    { name: "Kue Nastar", meaning: "Kamu selalu hadir di saat-saat spesial dengan rasa yang manis dan enak." },
+    { name: "Krupuk Ikan", meaning: "Kamu renyah dan selalu bikin suasana jadi lebih seru." },
+    { name: "Es Teler", meaning: "Kamu segar dan penuh kejutan dengan campuran rasa yang enak." },
+    { name: "Rujak Buah", meaning: "Kamu segar dan selalu bikin suasana jadi lebih hidup dengan rasamu yang pedas dan manis." },
+    { name: "Soto Ayam", meaning: "Kamu selalu bikin hangat dan puas dengan kuahmu yang lezat." },
+    { name: "Tahu Bulat", meaning: "Kamu selalu hadir di momen-momen yang pas dengan rasa yang enak." },
+    { name: "Keripik Singkong", meaning: "Kamu renyah dan selalu bikin suasana jadi lebih seru." },
+    { name: "Kacang Goreng", meaning: "Kamu selalu jadi camilan favorit di setiap kesempatan." },
+    { name: "Tongseng Sapi", meaning: "Kamu kaya rasa dan selalu bikin orang ketagihan dengan kelezatanmu." },
+    { name: "Sate Padang", meaning: "Kamu selalu bikin kenyang dan puas dengan rasa khasmu yang lezat." },
+    { name: "Nasi Uduk", meaning: "Kamu selalu bikin kenyang dan puas dengan rasa gurihmu yang enak." },
+    { name: "Cendol Dawet", meaning: "Kamu segar dan selalu bikin suasana jadi lebih adem di saat-saat panas." },
+    { name: "Onde-onde", meaning: "Kamu selalu hadir di saat-saat spesial dengan rasa yang manis dan enak." },
+    { name: "Kolak Pisang", meaning: "Kamu manis dan selalu bikin suasana jadi lebih hangat dan nyaman." },
+    { name: "Macan Kumbang", meaning: "Kamu misterius dan kuat, seperti macan yang jarang terlihat tapi selalu waspada." },
+    { name: "Kuda Emas", meaning: "Kamu berharga dan kuat, siap untuk berlari menuju kesuksesan." },
+    { name: "Elang Biru", meaning: "Kamu memiliki visi yang tajam dan dapat melihat peluang dari jauh." },
+    { name: "Indomie Goreng", meaning: "Selalu bikin kenyang dan bahagia" },
+    { name: "Es Krim Meleleh", meaning: "Selalu mencairkan suasana dengan rasa manisnya" },
+    { name: "Bakso Ulet", meaning: "Selalu gigih dan bulat dalam menghadapi masalah" },
+    { name: "Lem Super", meaning: "Selalu lengket dalam situasi yang rumit" },
+    { name: "Kecap Manis", meaning: "Selalu memberikan sentuhan manis dalam hidup" },
+    { name: "Sabun Mandi", meaning: "Selalu bersih dan wangi" },
+    { name: "Kopi Tumpah", meaning: "Selalu bersemangat, tapi kadang berantakan" },
+    { name: "Sepeda Ontel", meaning: "Selalu klasik dan sederhana" },
+    { name: "Roti Bakar", meaning: "Selalu hangat dan enak" },
+    { name: "Kucing Kampung", meaning: "Selalu mandiri dan penuh petualangan" },
+    { name: "Jamu Pahit", meaning: "Selalu memberi kekuatan meski tak enak di awal" },
+    { name: "Teh Celup", meaning: "Selalu memberikan rasa hangat di hati" },
+    { name: "Tas Kresek", meaning: "Selalu ringan dan praktis" },
+    { name: "Es Kelapa", meaning: "Selalu segar dan menyegarkan" },
+    { name: "Motor Astrea", meaning: "Selalu setia dan bandel" },
+    { name: "Mie Instan", meaning: "Selalu cepat dan mengenyangkan" },
+    { name: "Bolu Kukus", meaning: "Selalu lembut dan manis" },
+    { name: "Tahu Bulat", meaning: "Selalu enak di segala suasana" },
+    { name: "Nasi Uduk", meaning: "Selalu cocok di segala waktu" },
+    { name: "Susu Kental Manis", meaning: "Selalu menambah kenikmatan" },
+    { name: "Kopi Hitam", meaning: "Selalu memberi semangat di pagi hari" },
+    { name: "Kacang Goreng", meaning: "Selalu asyik untuk ngemil" },
+    { name: "Ayam Goreng Tepung", meaning: "Selalu renyah dan nikmat" },
+    { name: "Sambal Terasi", meaning: "Selalu pedas dan menggigit" },
+    { name: "Ketoprak", meaning: "Selalu mengenyangkan dan lezat" },
+    { name: "Cendol Dawet", meaning: "Selalu segar di siang hari" },
+    { name: "Gado-Gado", meaning: "Selalu penuh warna dan rasa" },
+    { name: "Pisang Goreng", meaning: "Selalu manis dan gurih" },
+    { name: "Martabak Manis", meaning: "Selalu lezat dan memanjakan lidah" },
+    { name: "Bubur Ayam", meaning: "Selalu hangat dan mengenyangkan" },
+    { name: "Soto Ayam", meaning: "Selalu kaya rasa dan gurih" },
+    { name: "Nasi Padang", meaning: "Selalu penuh dengan kenikmatan" },
+    { name: "Rendang Daging", meaning: "Selalu empuk dan kaya rempah" },
+    { name: "Nasi Goreng", meaning: "Selalu praktis dan enak" },
+    { name: "Bakmi Jawa", meaning: "Selalu menggugah selera" },
+    { name: "Sate Ayam", meaning: "Selalu enak di segala acara" },
+    { name: "Gulai Kambing", meaning: "Selalu kaya rasa dan lezat" },
+    { name: "Rawon Sapi", meaning: "Selalu hitam dan nikmat" },
+    { name: "Ikan Bakar", meaning: "Selalu gurih dan enak" },
+    { name: "Pepes Tahu", meaning: "Selalu lezat dan bergizi" },
+    { name: "Tempe Mendoan", meaning: "Selalu gurih dan renyah" },
+    { name: "Keripik Singkong", meaning: "Selalu renyah dan menggoda" },
+    { name: "Jus Alpukat", meaning: "Selalu segar dan menyehatkan" },
+    { name: "Es Teler", meaning: "Selalu segar dan nikmat" },
+    { name: "Bubur Kacang Hijau", meaning: "Selalu hangat dan mengenyangkan" },
+    { name: "Bakpao", meaning: "Selalu lembut dan enak" },
+    { name: "Pempek", meaning: "Selalu gurih dan kenyal" },
+    { name: "Sosis Bakar", meaning: "Selalu enak di segala suasana" },
+    { name: "Lumpia Semarang", meaning: "Selalu gurih dan nikmat" },
+    { name: "Otak-Otak", meaning: "Selalu enak dan gurih" },
+    { name: "Pastel", meaning: "Selalu renyah dan nikmat" },
+    { name: "Cilok", meaning: "Selalu kenyal dan enak" },
+    { name: "Bakwan Jagung", meaning: "Selalu gurih dan lezat" },
+    { name: "Risol", meaning: "Selalu renyah dan enak" },
+    { name: "Combro", meaning: "Selalu gurih dan pedas" },
+    { name: "Getuk", meaning: "Selalu manis dan kenyal" },
+    { name: "Tape Singkong", meaning: "Selalu manis dan segar" },
+    { name: "Wedang Jahe", meaning: "Selalu hangat dan menenangkan" },
+    { name: "Dawet Ayu", meaning: "Selalu segar dan menggoda" },
+    { name: "Es Buah", meaning: "Selalu segar dan penuh warna" },
+    { name: "Es Doger", meaning: "Selalu manis dan menyegarkan" },
+    { name: "Tengkleng", meaning: "Selalu gurih dan enak" },
+    { name: "Gulai Nangka", meaning: "Selalu kaya rasa dan lezat" },
+    { name: "Coto Makassar", meaning: "Selalu gurih dan nikmat" },
+    { name: "Nasi Liwet", meaning: "Selalu enak dan mengenyangkan" },
+    { name: "Bubur Sumsum", meaning: "Selalu lembut dan manis" },
+    { name: "Kue Cubit", meaning: "Selalu manis dan lembut" },
+    { name: "Bolu Pandan", meaning: "Selalu harum dan enak" },
+    { name: "Onde-Onde", meaning: "Selalu kenyal dan manis" },
+    { name: "Serabi Solo", meaning: "Selalu lembut dan gurih" },
+    { name: "Lemper Ayam", meaning: "Selalu gurih dan lezat" },
+    { name: "Kue Lumpur", meaning: "Selalu lembut dan manis" },
+    { name: "Kue Lapis", meaning: "Selalu warna-warni dan manis" },
+    { name: "Kue Putu", meaning: "Selalu hangat dan manis" },
+    { name: "Es Pisang Ijo", meaning: "Selalu segar dan manis" },
+    { name: "Klepon", meaning: "Selalu manis dan kenyal" },
+    { name: "Martabak Telur", meaning: "Selalu gurih dan enak" },
+    { name: "Ayam Penyet", meaning: "Selalu pedas dan menggigit" },
+    { name: "Ikan Asin", meaning: "Selalu gurih dan asin" },
+    { name: "Sop Buntut", meaning: "Selalu kaya rasa dan nikmat" },
+    { name: "Bakso Malang", meaning: "Selalu gurih dan lezat" },
+    { name: "Pempek Palembang", meaning: "Selalu enak dan gurih" },
+    { name: "Tahu Gejrot", meaning: "Selalu pedas dan segar" },
+    { name: "Gepuk Daging", meaning: "Selalu empuk dan lezat" },
+    { name: "Ayam Betutu", meaning: "Selalu kaya bumbu dan enak" },
+    { name: "Ikan Gurame", meaning: "Selalu gurih dan nikmat" },
+    { name: "Udang Goreng", meaning: "Selalu renyah dan enak" },
+    { name: "Cumi Saus Tiram", meaning: "Selalu gurih dan lezat" },
+    { name: "Royco Ayam", meaning: "Selalu menambah rasa gurih pada setiap kesempatan" },
+    { name: "Honda Supra", meaning: "Selalu bisa diandalkan di jalanan" },
+    { name: "Kompor Meledak", meaning: "Selalu memberikan kehangatan yang luar biasa" },
+    { name: "Es Batu Menangis", meaning: "Selalu mencair di saat yang tak terduga" },
+    { name: "Teh Botol Sosro", meaning: "Selalu segar di segala suasana" },
+    { name: "Payung Bocor", meaning: "Selalu memberikan kejutan saat hujan" },
+    { name: "Kursi Tertawa", meaning: "Selalu membuatmu nyaman dengan gayanya yang lucu" },
+    { name: "Motor Vespa", meaning: "Selalu klasik dan penuh gaya" },
+    { name: "Ember Bocor", meaning: "Selalu berfungsi walau tak sempurna" },
+    { name: "Bantal Gebuk", meaning: "Selalu menemani tidurmu dengan kenyamanan" },
+    { name: "Mie Sedap", meaning: "Selalu cepat dan mengenyangkan" },
+    { name: "Komputer Ngadat", meaning: "Selalu menantang kesabaranmu" },
+    { name: "Handphone Jadul", meaning: "Selalu setia meski ketinggalan zaman" },
+    { name: "Kulkas Berisik", meaning: "Selalu bising tapi berguna" },
+    { name: "Rokok Gudang Garam", meaning: "Selalu nikmat di setiap tarikan" },
+    { name: "Radio Tua", meaning: "Selalu menghidupkan suasana" },
+    { name: "Sepatu Butut", meaning: "Selalu nyaman meski usang" },
+    { name: "Blender Bising", meaning: "Selalu ribut tapi membantu" },
+    { name: "Sapu Ijuk", meaning: "Selalu membersihkan dengan efektif" },
+    { name: "Kipas Angin", meaning: "Selalu memberikan angin segar" },
+    { name: "Rice Cooker", meaning: "Selalu memasak nasi dengan sempurna" },
+    { name: "Senter Mati", meaning: "Selalu ada saat dibutuhkan" },
+    { name: "Pisau Tumpul", meaning: "Selalu menantang dalam memotong" },
+    { name: "Honda Beat", meaning: "Selalu lincah di jalanan" },
+    { name: "Kerupuk Udang", meaning: "Selalu renyah dan nikmat" },
+    { name: "Gitar Sumbang", meaning: "Selalu memberikan nada yang tak terduga" },
+    { name: "Meja Bergoyang", meaning: "Selalu bergoyang saat digunakan" },
+    { name: "Jok Motor", meaning: "Selalu empuk dan nyaman" },
+    { name: "Tikar Lipat", meaning: "Selalu praktis di segala acara" },
+    { name: "Paku Karet", meaning: "Selalu lentur dan tak terduga" },
+    { name: "Lemari Besi", meaning: "Selalu kuat dan kokoh" },
+    { name: "Sepeda BMX", meaning: "Selalu siap untuk petualangan" },
+    { name: "Tas Belanja", meaning: "Selalu praktis dan berguna" },
+    { name: "Lilin Meleleh", meaning: "Selalu memberikan cahaya di kegelapan" },
+    { name: "Kabel Kusut", meaning: "Selalu membuat bingung" },
+    { name: "Honda CBR", meaning: "Selalu cepat dan penuh gaya" },
+    { name: "Sendok Miring", meaning: "Selalu memberi sensasi berbeda" },
+    { name: "Gelas Retak", meaning: "Selalu siap walau tak sempurna" },
+    { name: "Lampu Tidur", meaning: "Selalu memberikan cahaya lembut" },
+    { name: "Karet Gelang", meaning: "Selalu fleksibel dan berguna" },
+    { name: "Honda Vario", meaning: "Selalu tangguh di segala medan" },
+]
+                
 const loader = document.querySelector('.loader')
 const box = document.getElementById('box')
 const input = document.getElementById('input')
@@ -201,10 +219,10 @@ function cekKhodam() {
         box.style.opacity = '0.5'
         setTimeout(() => {
             const randomKhodam = khodams[Math.floor(Math.random() * khodams.length)]
-            const namaKhodam = randomKhodam.nama;
-            const deskripsiKhodam = randomKhodam.deskripsi;
+            const namaKhodam = randomKhodam.name;
+            const deskripsiKhodam = randomKhodam.meaning;
             desc.innerHTML = `Khodam yang ada dalam diri <br> <span>${inputVal}</span> adalah`
-            kodam.innerText = `${namaKhodam}`;
+            kodam.innerText = `${namaKhodam}`
             meaning.innerText = `${deskripsiKhodam}`
             loader.style.display = 'none'
             box.style.opacity = ''
